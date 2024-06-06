@@ -55,6 +55,85 @@ nav .right a span{
     margin-left: 5px;
 }
 
+/*Section 1-Hero*/
+.hero{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 50px;
+   margin: 50px 0;
+   margin-bottom: 100px;
+   gap: 40px;
+}
+
+.hero .text{
+    flex: 5;
+}
+
+.hero .text h2{
+    font-size: 45px;
+}
+
+.hero .text .links{
+    margin-top: 25px;
+}
+
+.hero .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.hero .text .links a :hover{
+    color:var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero .headshot img{
+    width: 350px;
+    border-radius: 50%;
+}
+
+@media(max-width: 863px){
+    /*Section 1-Hero*/
+    .hero .text h2{
+        font-size: 35px;
+    }  
+    
+    /*.hero .text .links a{
+        display: inline-block;
+        padding: 5px 5px;
+        border: 2px solid var(--link-color);
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        transition: 1s;
+    }*/
+
+}
+
+@media(max-width: 752px){
+    /*Section 1-Hero*/
+    .hero {
+        flex-direction: column-reverse;
+    }  
+
+    .hero .headshot img{
+        width: 300px;
+        
+    }
+}
+
 @media(max-width: 600px){
     /*Navbar*/
     nav{
@@ -74,9 +153,18 @@ nav .right a span{
     nav .right a span{
         display: none;
     }
+
+    /*Section 1-Hero*/
+    .hero{
+        padding: 0 20px;
+
+    }
+    .hero .text h2{
+        font-size: 30px;
+    }
 }
 
-@media(max-width: 464px){
+@media(max-width: 740px){
     /*Navbar*/
     nav{
         padding: 0 10px;
