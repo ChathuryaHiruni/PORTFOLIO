@@ -17,6 +17,8 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     background-color:var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 a{
@@ -145,6 +147,119 @@ nav .right a span{
     border-radius: 2px;
 }
 
+.skills .cells .cell span{
+    font-size: 18px;
+}
+
+/*Section 3-Reference*/
+.references{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.references h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.references .group{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.references .group .person-details{
+    text-align: center;
+    flex: 2;
+}
+
+.references .group .text{
+    flex: 8;
+}
+
+.references .group .person-details img{
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.references .group .person-details p{
+    font-weight: 600;
+}
+
+.references .group .person-details p:last-child{
+    font-weight: normal;
+}
+
+/*Section 4-Contact*/
+.contacts{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contacts h2{
+    font-size: 35px;
+}
+
+.contacts .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contacts .group .text{
+    flex: 3;
+}
+
+.contacts .group .text .button2{
+    flex: 1;
+    display: inline block;
+    background: #1a1c28;
+    align-items: center;
+
+}
+
+.contacts .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts .group form input,
+.contacts .group form textarea{
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color:transparent;
+    margin-bottom: 15px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+
+}
+
+.contacts .group form button{
+    font-size: 16px;
+    font-family:'Poppins', sans-serif ;
+    color:white;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.contacts .group form button:hover{
+    filter:brightness(.9);
+}
+
+.contacts .group form span{
+    color: black;
+    padding: 20px 0;
+    display: block;
+    
+
+}
 
 @media(max-width: 863px){
     /*Section 1-Hero*/
@@ -161,8 +276,21 @@ nav .right a span{
     }  
 
     .hero .headshot img{
-        width: 300px;
-        
+        width: 300px;  
+    }
+
+    /*Section 3-References*/
+    .references{
+        text-align: center;
+    }
+
+    .references .group{
+        flex-direction: column;
+    }
+
+    /*Section 4-Contact*/
+    .contacts .group{
+        flex-direction: column;
     }
 }
 
@@ -193,6 +321,25 @@ nav .right a span{
     }
     .hero .text h2{
         font-size: 30px;
+    }
+
+    /*Section 2-skills*/
+    .skills{
+        padding: 0 20px;
+    }
+
+    .skills .cells .cell span{
+        font-size: 16px;
+    }
+
+    /*Section 3-References*/
+    .references{
+        padding: 0 20px;
+    }
+
+    /*Section 4-Contact*/
+    .contacts{
+        padding: 0 20px;
     }
 }
 

@@ -45,11 +45,11 @@
                     I'm excited to be at the beginning of my web development journey and am currently gaining experience as a beginner developer at Barathaintern in India.</p>
 
                 <div class="links">
-                    <a href="#skills">
+                    <a href="#skill">
                         <i class="fa-solid fa-code"></i>
                         <span>Skills</span>
                     </a>
-                    <a href="#References">
+                    <a href="#reference">
                         <i class="fa-solid fa-pen"></i>
                         <span>Reference</span>
                     </a>
@@ -103,11 +103,66 @@
         </section>
 
         <!--Section 3:References-->
-        <section id="references"></section>
+        <section id="reference" class="references">
+            <h2>Reference</h2>
+            <div class="group">
+                <div class="person-details">
+                    <img src="images/360_F_332596535_lAdLhf6KzbW6PWXBWeIFTovTii1drkbT.webp" alt="reference">
+                    <p>Thirupathi Subaharan</p>
+                    <p>Government Teacher</p>
+                </div>
+                <div class="text">
+                    Mr.T.Subaharan has been an exemplary Information Technology teacher at Hartly College, Jaffna. 
+                    His dedication to teaching and his ability to engage students in the subject matter are commendable. 
+                    He combines a strong technical background with a passion for education, consistently helping students develop essential IT skills and fostering a positive learning environment.
+                </div>
+            </div>
+
+        </section>
 
         <!--Section 4:Contact-->
-        <section id="contact"></section>
+        <section id="contact" class="contacts">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="text">
+                    If you prefer a more detailed version,please use the contact form available at here.
+                    <a href="images/UpdatedCV.pdf" download class="button2">Download CV</a>
+                </div>
+                <form name="submit-to-google-sheet">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="Name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="Email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="10" cols="30" name="Message"></textarea>
+
+                    <button type="submit">Send Message</button>
+                    <span id="msg"></span>
+                </form>
+            </div>
+
+        </section>
     </main>
-    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzbEk5TswfgosvAMN7-aWkWwM204uPdP8jLbfDVueGB4VHvGXpzMXmQLwvmF7OI0BCk/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function() {
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
 </body>
 </html>
